@@ -1,15 +1,18 @@
 import unittest
 import os
+
+from pages import players_page
 from pages.add_a_player import AddAPlayer
 
 import time
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from pages.login_page import LoginPage
+from pages.players_page import PlayersPage
+from pages.dashboard import Dashboard
 from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
 
-class TestAddAPlayer(unittest.TestCase):
-
+class TestPlayersPage(unittest.TestCase):
     @classmethod
     def setUp(self):
         os.chmod(DRIVER_PATH, 755)
@@ -23,21 +26,18 @@ class TestAddAPlayer(unittest.TestCase):
         user_login.type_in_email('user02@getnada.com')
         user_login.type_in_password('Test-1234')
         user_login.click_on_the_sign_in_button()
+        dashboard_page = Dashboard(self.driver)
+        dashboard_page.wait_for_element_to_be_clickable('/html/body/div/div[1]/div/div/div/ul[1]/div[2]/div[2]/span')
+        dashboard_page.click_on_players_button()
         time.sleep(5)
 
-    def test_add_a_player(self):
-        add_player = AddAPlayer(self.driver)
-        add_player.click_on_the_add_player_button()
-        add_player.title_of_page()
 
-        add_player.type_in_name('Edward') #adding a player Edward Ziemba
-        add_player.type_in_surname('Ziemba')
-        add_player.type_in_age('25.12.1995')
-        add_player.type_in_main_position('Goalkeeper')
-        add_player.click_on_the_submit_button()
-
-
-
+    def test_players_page(self):
+        players_page = PlayersPage(self.driver) #checking title of players page
+        players_page.title_of_page()
+        players_page.click_on_sign_out_button() #logout from players_page
+        user_login = LoginPage(self.driver)
+        user_login.title_of_page()
 
     @classmethod
     def tearDown(self):
