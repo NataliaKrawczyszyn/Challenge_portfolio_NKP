@@ -7,10 +7,10 @@ class AddAPlayer(BasePage):
     sign_in_button_xpath = "//*[text()='Sign in']"
     login_url = ("https://scouts-test.futbolkolektyw.pl/en/login?redirected=true")
 
-    add_player_button_xpath = "/html/body/div/div[1]/main/div[3]/div[2]/div/div/a/button/span[1]"
+    add_player_button_xpath = "//*[text()='Add player']"
     add_player_url = ("https://scouts-test.futbolkolektyw.pl/en/players/add")
     expected_title = "Add player"
-    submit_button_xpath = "/html/body/div/div[1]/main/div[2]/form/div[3]/button[1]/span[1]"
+    submit_button_xpath = "//*[text()='Submit']"
     name_field_xpath = "/html/body/div/div[1]/main/div[2]/form/div[2]/div/div[2]/div/div/input"
     surname_field_xpath = "/html/body/div/div[1]/main/div[2]/form/div[2]/div/div[3]/div/div/input"
     main_position_field_xpath = "/html/body/div/div[1]/main/div[2]/form/div[2]/div/div[11]/div/div/input"

@@ -1,6 +1,7 @@
 import unittest
 
 from unittest.loader import makeSuite
+from unittest.loader import TestLoader
 
 # from test_cases.fill_in_a_form import TestFillInaForm
 
