@@ -1,3 +1,5 @@
+# <h5> Link do Google Drive: https://drive.google.com/drive/folders/1NQV7cv3UIUipfooztDUwceigYlhrMMpD?usp=sharing
+
 # <h1> Zadanie 1: Konfiguracja środowiska
 # <h2> Podzadanie 2: Dlaczego zdecydowałam się wziąć udział w wyzwaniu Dare IT Challenge?<h2>
 # <h4> Polubiłam Pythona i testowanie manualne, dlaczego zatem nie połączyć dotychczasowej wiedzy w jedną ściężkę dalszego rozwoju - testowanie automatyczne w Pythonie? Testy automatyczne są przyszłością i chcę być częścią tej rewolucji, która już się rozpoczęła. Niech moc będzie z nami, uczestnikami!
