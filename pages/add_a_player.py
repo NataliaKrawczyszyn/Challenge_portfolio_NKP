@@ -5,7 +5,7 @@ class AddAPlayer(BasePage):
     login_field_xpath = "//*[@id='login']"
     password_field_xpath = "//*[@id='password']"
     sign_in_button_xpath = "//*[text()='Sign in']"
-    login_url = ("https://scouts-test.futbolkolektyw.pl/en/login?redirected=true")
+    login_url = ("https://dareit.futbolkolektyw.pl/en/login?redirected=true")
 
     add_player_button_xpath = "//*[text()='Add player']"
     add_player_url = ("https://scouts-test.futbolkolektyw.pl/en/players/add")
